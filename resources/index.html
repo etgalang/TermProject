@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrimWare - Anime Streetwear</title>
+    <link rel="stylesheet" href="splash.css">
+    <style>
+        /* Add your CSS styles here if needed */
+    </style>
+    <script>
+        function toggleMenu() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top-marquee">
+        <div class="marquee-content">
+            <p>&#8226; OFFICIAL OPENING SPRING / SUMMER 2024! &nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>&#8226; JOIN THE MAIL LIST TO STAY UPDATED &nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>&#8226; OFFICIAL OPENING SPRING / SUMMER 2024! &nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>&#8226; JOIN THE MAIL LIST TO STAY UPDATED &nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="cart-icon">
+            <a href="#cart">
+                <img src="Cart Icon.png" alt="Cart Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <a href="#home">
+                <img src="Grimware White Logo.png" alt="GrimWare Logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button onclick="submitSearch()">Go</button>
+        </div>
+    </div>
+
+    <div class="splash">
+        <h2>Subtle & Clean</h2>
+        <p></p>
+
+        <!-- Featured Product Section -->
+        <div class="featured-product">
+            <img src="Blue Flamed.png" alt="Featured Product">
+            <div class="product-details">
+                <h3>Featured Product</h3>
+                <p>Embrace the subtlety of our "Sakura Shadows" Hoodie. Limited edition, inspired by the beauty of
+                    cherry blossoms.</p>
+                <p class="price">$24.99</p>
+                <button onclick="window.location.href='#products'">Explore Now</button>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <p>Stay Updated!</p>
+            <p> Sign up for our Email List</p>
+            <button onclick="window.location.href='#signup'">Sign Up Now</button>
+        </div>
+    </div>
+
+    <footer class="black-footer">
+        <p>&copy; 2024 GrimWare. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
