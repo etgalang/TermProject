@@ -1,0 +1,246 @@
+/* Universal Reset for Margin, Padding, and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Revolving Text Section */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.top-marquee {
+    overflow: hidden;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    margin-bottom: 20px;
+}
+
+.marquee-content {
+    white-space: nowrap;
+    display: inline-block;
+    animation: marqueeAnimation 15s linear infinite;
+}
+
+.marquee-content p {
+    display: inline;
+    margin-right: 50px;
+}
+
+@keyframes marqueeAnimation {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Splash Section */
+.splash {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 80px 0 50px 0;
+    margin-top: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background_image.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.featured-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30;
+}
+
+.featured-product img {
+    /* Product image*/
+    width: 50%;
+    height: px;
+    object-fit: cover;
+    border-radius: 3px;
+    background: url('./resources/Blue Flamed.png') center/cover no-repeat;
+}
+
+.product-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-details h3 {
+    /* Featured Product Title*/
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.product-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    color: #00ff4c;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+/*Copy Right*/
+.black-footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Navigation Bar */
+body, .top-marquee {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #ffffff;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+.cart-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.cart-icon img {
+    max-width: 40px; /* Adjust the size as needed */
+    height: auto;
+}
+
+.logo {
+    /* Keeps the logo in the middle */
+    margin-right: auto; 
+    margin-left: 160px; 
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.menu-container:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Search Container Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-container input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.search-container button {
+    background-color: #0077ff;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-container button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Call to Action */
+.cta {
+    border-top: 1px solid #fff; /* Add this line for the dividing line */
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.cta p {
+    margin-bottom: 5px;
+}
+
+.cta button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cta button:hover {
+    background-color: #2980b9;
+}
