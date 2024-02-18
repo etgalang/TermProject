@@ -1,0 +1,70 @@
+<!-- details.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - GrimWare</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+
+    <!-- Header -->
+    <div class="navbar">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="cart-icon">
+            <a href="cart.html"> <!-- Update this line -->
+                <img src="Cart Icon.png" alt="Cart Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Grimware White Logo.png" alt="GrimWare Logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button onclick="submitSearch()">Go</button>
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="product-details">
+        <img src="Blue Flamed BucketHat.png" alt="Product Image">
+        <div class="details">
+            <h2>Blue Exorcist Reversible Bucket Hat</h2>
+            <p>The Blue Exorcist Reversible Bucket Hat is inspired by the popular anime series and features iconic
+                imagery. This stylish hat is satin-lined and reversible, offering both comfort and versatility.</p>
+            <p>Material: Cotton & Silk Satin</p>
+            <p>Sizing: One size fits most</p>
+            <p>$19.99</p>
+            <!-- Add to cart button -->
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="black-footer">
+        <p>&copy; 2024 GrimWare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>
