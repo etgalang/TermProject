@@ -11,14 +11,10 @@ This repository contains the code for the GrimWare brand site. It serves as both
 
 ## Features
 
-- Responsive design for compatibility across devices.
-- Simple navigation for easy exploration.
-- Stylish layout to represent the GrimWare brand effectively.
-
-## Contributing
-
-Contributions are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request. 
+-Working on it!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+-Working on it!
+
+
