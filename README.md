@@ -17,4 +17,6 @@ This repository contains the code for the GrimWare brand site. It serves as both
 
 -Working on it!
 
+![Schema Diagram Description](path/to/diagram.png)
+
 
