@@ -1,0 +1,87 @@
+/* admin.css */
+
+/* Universal Reset for Margin, Padding, and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Admin Navigation */
+.admin-navbar {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.admin-nav-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 20px; /* Add margin to the right */
+}
+
+.admin-nav-links ul li {
+    margin-right: 20px;
+}
+
+.admin-nav-links ul li:last-child {
+    margin-right: 0;
+}
+
+.admin-nav-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.admin-nav-links ul li a:hover {
+    color: #cccccc;
+}
+
+/* Bulk Upload Form */
+.bulk-upload-form {
+    margin-top: 100px; /* Adjust as needed */
+    padding: 20px;
+}
+
+.bulk-upload-form h2 {
+    margin-bottom: 20px;
+}
+
+.bulk-upload-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bulk-upload-form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.bulk-upload-form input[type="submit"] {
+    background-color: #0077ff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bulk-upload-form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Logo */
+.logo img {
+    max-width: 150px; /* Adjust logo size as needed */
+    height: auto;
+}

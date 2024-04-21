@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - GrimWare</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="navbar">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="cart-icon">
+            <a href="cart.html"> <!-- Update this line -->
+                <img src="Cart Icon.png" alt="Cart Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Grimware White Logo.png" alt="GrimWare Logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button onclick="submitSearch()">Go</button>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart">
+        <!-- Item 1 -->
+        <div class="cart-item">
+            <img src="Blue Flamed BucketHat.png" alt="Product 1">
+            <h3>Bucket Hat</h3>
+            <p>$19.99</p>
+            <input type="number" value="1">
+            <button onclick="updateCart()">Update</button>
+            <button onclick="removeItem(this)">Remove</button>
+        </div>
+        <!-- Item 2 -->
+        <div class="cart-item">
+            <img src="Blue Flamed Graphic Tee with watermark.png" alt="Product 2">
+            <h3>Graphic Tee</h3>
+            <p>$29.99</p>
+            <input type="number" value="2">
+            <button onclick="updateCart()">Update</button>
+            <button onclick="removeItem(this)">Remove</button>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+
+    <!-- Cart Total -->
+    <div class="cart-total" id="cartTotal">
+        <h2>Cart Total</h2>
+        <p id="subtotal">Subtotal: $79.97</p>
+        <p id="tax">Tax (6.75%): $5.40</p>
+        <p id="deliveryFee">Delivery Fee: $15.00</p>
+        <!-- Add more totals as needed -->
+        <p id="total">Total: $100.37</p>
+        <button>Checkout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="black-footer">
+        <p>&copy; 2024 GrimWare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+
+        function updateCart() {
+            var subtotal = 0;
+            var items = document.querySelectorAll('.cart-item');
+            items.forEach(function(item) {
+                var price = parseFloat(item.querySelector('p').textContent.slice(1));
+                var quantity = parseInt(item.querySelector('input').value);
+                subtotal += price * quantity;
+            });
+            var tax = subtotal * 0.0675;
+            var deliveryFee = 15.00;
+            var total = subtotal + tax + deliveryFee;
+            document.getElementById('subtotal').textContent = 'Subtotal: $' + subtotal.toFixed(2);
+            document.getElementById('tax').textContent = 'Tax (6.75%): $' + tax.toFixed(2);
+            document.getElementById('total').textContent = 'Total: $' + total.toFixed(2);
+        }
+
+        function removeItem(button) {
+            button.parentNode.remove();
+            updateCart();
+        }
+    </script>
+</body>
+
+</html>
